@@ -31,3 +31,44 @@ class Solution {
         
     }
 }
+
+Day-2
+1.valid parentheses
+
+class Solution {
+    public boolean isValid(String s) {
+        Stack<Character> st=new Stack<>();
+        for(char c:s.toCharArray()){
+            if(c == '(')
+            st.push(')');
+            else if(c=='{')
+            st.push('}');
+            else if(c=='[')
+            st.push(']');
+            else if(st.isEmpty() || st.pop()!=c)
+            return false;
+        }
+        return st.isEmpty();
+
+        
+    }
+} 
+
+2.group anagram
+
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        Map<String,List<String>> m=new HashMap<>();
+        for(String s:strs){
+            char ch[]=s.toCharArray();
+            Arrays.sort(ch);
+            String s1=String.valueOf(ch);
+            if(!m.containsKey(s1)){
+                m.put(s1,new ArrayList<>());
+            }
+            m.get(s1).add(s);
+        }
+        return new ArrayList<>(m.values());
+        
+    }
+}
