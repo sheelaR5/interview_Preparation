@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Rental System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚗 Vehicle Rental Management System</h1>
+
+<div class="vehicle-container">
+
+    <div class="card">
+        <img src="images/car1.jpg" alt="Toyota">
+        <h2>Toyota Innova</h2>
+        <p>₹2500 / Day</p>
+        <button onclick="bookVehicle(1,'Toyota Innova')">Book Now</button>
+    </div>
+
+    <div class="card">
+        <img src="images/car2.jpg" alt="Hyundai">
+        <h2>Hyundai Creta</h2>
+        <p>₹2200 / Day</p>
+        <button onclick="bookVehicle(2,'Hyundai Creta')">Book Now</button>
+    </div>
+
+    <div class="card">
+        <img src="images/bike1.jpg" alt="Bike">
+        <h2>Royal Enfield</h2>
+        <p>₹900 / Day</p>
+        <button onclick="bookVehicle(3,'Royal Enfield')">Book Now</button>
+    </div>
+
+    <div class="card">
+        <img src="images/scooter1.jpg" alt="Scooter">
+        <h2>Honda Activa</h2>
+        <p>₹500 / Day</p>
+        <button onclick="bookVehicle(4,'Honda Activa')">Book Now</button>
+    </div>
+
+</div>
+
+<div id="bookingForm" class="form" style="display:none;">
+    <h2>Book Vehicle</h2>
+
+    <input type="text" id="customerName" placeholder="Customer Name">
+    <input type="email" id="customerEmail" placeholder="Email">
+    <input type="text" id="customerPhone" placeholder="Phone">
+    <input type="date" id="bookingDate">
+
+    <button onclick="submitBooking()">Confirm Booking</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
